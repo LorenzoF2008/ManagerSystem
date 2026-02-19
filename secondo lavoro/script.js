@@ -1,9 +1,6 @@
-// Dimensione totale RAM
-const RAM_SIZE = 1000; // MB
-
-// Array memoria (inizialmente tutta libera)
-let memoria = [
-    { nome: "LIBERO", dimensione: RAM_SIZE }
+let partizioni = [
+    { id: 1, dimensione: 200, processo: null },
+    { id: 2, dimensione: 300, processo: null },
+    { id: 3, dimensione: 250, processo: null },
+    { id: 4, dimensione: 150, processo: null }
 ];
-
-

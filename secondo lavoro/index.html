@@ -2,40 +2,49 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Simulatore Allocazione RAM</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Simulatore Partizioni Fisse</title>
 </head>
 <body>
 
-<h1>Simulatore Allocazione RAM - First Fit</h1>
+    <h1>Simulatore Gestione Memoria - Partizioni Fisse</h1>
 
-<section>
-    <h2>Inserisci Processo</h2>
-    <label>Nome Processo:</label>
-    <input type="text" id="nome">
+    <hr>
 
-    <label>Dimensione (MB):</label>
-    <input type="number" id="dimensione">
+    <h2>Inserimento Processo</h2>
 
-    <button onclick="aggiungiProcesso()">Alloca Processo</button>
-</section>
+    <form>
+        <label>Nome Processo:</label><br>
+        <input type="text" id="nome"><br><br>
 
-<section>
-    <h2>RAM</h2>
-    <div id="ram"></div>
-    <p id="spazioLibero"></p>
-</section>
+        <label>Dimensione (MB):</label><br>
+        <input type="number" id="dimensione"><br><br>
 
-<section>
-    <h2>Tecnica di Allocazione</h2>
+        <button type="button">Alloca Processo</button>
+    </form>
+
+    <hr>
+
+    <h2>Stato della RAM</h2>
+
+    <div id="ram">
+        <p>Partizione 1 - 200MB - Libera</p>
+        <p>Partizione 2 - 300MB - Libera</p>
+        <p>Partizione 3 - 250MB - Libera</p>
+        <p>Partizione 4 - 150MB - Libera</p>
+    </div>
+
+    <hr>
+
+    <h2>Tecnica di Allocazione: Partizioni Fisse</h2>
+
     <p>
-        È stata utilizzata la tecnica <strong>First Fit</strong>.
-        L'algoritmo scorre la memoria dall'inizio e assegna al processo
-        il primo blocco libero sufficientemente grande.
-        Questa tecnica è semplice e veloce, ma può generare frammentazione esterna.
+        La memoria RAM è suddivisa in partizioni di dimensione prefissata.
+        Ogni partizione può contenere un solo processo.
+        Se il processo è più piccolo della partizione assegnata,
+        lo spazio rimanente rappresenta frammentazione interna.
+        Se il processo è più grande della partizione,
+        non può essere allocato.
     </p>
-</section>
 
 </body>
 </html>
