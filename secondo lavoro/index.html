@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulatore Allocazione RAM</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<h1>Simulatore Allocazione RAM - First Fit</h1>
+
+<section>
+    <h2>Inserisci Processo</h2>
+    <label>Nome Processo:</label>
+    <input type="text" id="nome">
+
+    <label>Dimensione (MB):</label>
+    <input type="number" id="dimensione">
+
+    <button onclick="aggiungiProcesso()">Alloca Processo</button>
+</section>
+
+<section>
+    <h2>RAM</h2>
+    <div id="ram"></div>
+    <p id="spazioLibero"></p>
+</section>
+
+<section>
+    <h2>Tecnica di Allocazione</h2>
+    <p>
+        È stata utilizzata la tecnica <strong>First Fit</strong>.
+        L'algoritmo scorre la memoria dall'inizio e assegna al processo
+        il primo blocco libero sufficientemente grande.
+        Questa tecnica è semplice e veloce, ma può generare frammentazione esterna.
+    </p>
+</section>
+
+</body>
+</html>
+
